@@ -54,12 +54,12 @@ a {
 	height: 42px;
 	line-height: 42px;
 	text-align: center; 
-	background-color:#d70c28;
+	background-color: #ec1f71;
 	margin:  0px;
-	border-radius: 4px 4px 0px 0px;
 }
 .articleimg {
-	width: 100%;
+	width: 80%;
+	margin: 10px 10% 0px 10%;
 }
 .articlescore {
 	font-weight: bolder;
@@ -68,7 +68,7 @@ a {
 	background-color:#d70c28;
 	color:#eeeeee;
 	min-height:42px;
-	margin: -10px 0px 0px 0px;
+	margin: -10px 10% 0px 10%;
 	line-height:42px;
 	border-width: 0px 0px 5px 0px;
 	border-color: #930a39;
@@ -93,7 +93,7 @@ a {
 .article {
 	background-color: #dedcea;
 	margin-bottom: 10px;
-	border-color: #930a39;
+	border-color: #ff5297;
 	border-style: solid;
 	border-radius: 10px;
 	border-width: 5px;
