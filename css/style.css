@@ -1,6 +1,14 @@
-html, body{
+html{
     height: 100%;
-    background-color: #00000a;
+    background-color: #2a0014;
+    padding: 0% 3% 10% 3%;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('background.png');
+    background-repeat: repeat;
+}
+body{
+    height: 100%;
     padding: 0% 3% 10% 3%;
     margin: 0px;
     font-family: 'Roboto', sans-serif;
@@ -10,20 +18,20 @@ a {
 	text-decoration: none;
 }
 .header {
-	background-color:#ef0010;
+	background-color:#d70c28;
 	color:#eeeeee;
 	height:69px;
 	line-height:10px;
 	padding: 10px;
 	border-width: 0px 0px 5px 0px;
-	border-color: #d00011;
+	border-color: #930a39;
 	border-style: solid;
 }
 .logo {
 	float: right;
 }
 #about {
-	background-color:#22222d;
+	background-color:#1c0c1d;
 	color:#dedefe;
 	min-height:20px;
 	padding: 10px;
@@ -32,11 +40,11 @@ a {
 	text-align: center;
 	border-style: solid;
 	border-width: 0px 5px 5px 5px;
-	border-color: #11111f;
+	border-color: #110212;
 	border-radius: 0px 0px 10px 10px
 }
 #main {
-	background-color: #0a0a12;
+	background-color: #300f33;
 	border-radius: 0px 0px 10px 10px;
 	padding-bottom: 42px;
 	margin-bottom: 10%;
@@ -46,12 +54,12 @@ a {
 	height: 42px;
 	line-height: 42px;
 	text-align: center; 
-	background-color: #aaffc4;
+	background-color: #ec1f71;
 	margin:  0px;
 }
 .articleimg {
 	width: 80%;
-	margin: 0px 10% 3% 10%;
+	margin: 10px 10% 10px 10%;
 }
 .mp_articlebody {
 	margin: 10px 69px 0px 69px;
@@ -70,8 +78,8 @@ a {
 	margin-bottom: 10px;
 }
 .article {
-	background-color: #dfdfff;
-	border-color: #81e4ff;
+	background-color: #dedcea;
+	border-color: #ff5297;
 	border-style: solid;
 	border-radius: 10px;
 	border-width: 5px;
