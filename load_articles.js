@@ -1,7 +1,7 @@
 function loadArticleURL(){
-	if(location.search.length <= 1){
+	/*if(location.search.length <= 1){
 		location.search="?1";
-	}
+	}*/
 	var s = location.search;
 	var id = parseInt(s.slice(1));
 	loadArticle(id,"articles");
