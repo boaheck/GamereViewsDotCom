@@ -1,15 +1,32 @@
-function test() {
-	var tfile = new XMLHttpRequest();
-	tfile.onreadystatechange = function() {
+function loadArticleURL() {
+	if(location.search.length <= 1){
+		location.search="?1"
+	}
+	var s = location.search;
+	var id = parseInt(s.slice(1));
+	loadArticle(id,"articles");
+}
+
+function loadArticle(articleID, ParentID) {
+	var reviewIndex = getJSONFile("articles\\ReviewIndex");
+	var file = reviewIndex.articles[articleID].file;
+	var review = getJSONFile("articles\\"+file);
+	var htmlArticle = document.getElementById(ParentID);
+	htmlArticle.getElementsByClassName("articlehead")[0].innerHTML=review.articletitle;
+	htmlArticle.getElementsByClassName("articleimg")[0].setAttribute("src",review.img);
+	htmlArticle.getElementsByClassName("articlescore")[0].innerHTML=review.score;
+	htmlArticle.getElementsByClassName("articledate")[0].innerHTML=review.date;
+	htmlArticle.getElementsByClassName("articlebody")[0].innerHTML=review.bod;
+}
+
+function getJSONFile(file){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
 		if(tfile.readyState === 4 && tfile.status === 200) {
-			var tjson = JSON.parse(tfile.responseText);
-			var elem = document.getElementById("about");
-			elem.innerHTML = tjson.test;
-			console.log(tjson.test);
-			console.log(tjson.type);
+			var rjson = JSON.parse(xmlhttp.responseText);
+			return rjson;
 		}
 	};
-	tfile.open("GET","test.json",true);
-	tfile.send();
-	console.log("run");
+	xmlhttp.open("GET",file,true);
+	xmlhttp.send();
 }

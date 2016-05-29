@@ -74,6 +74,10 @@ a {
 	border-color: #930a39;
 	border-style: solid;
 }
+.articledate{
+	color: #444444;
+	margin-bottom: 4px;
+}
 .mp_articlebody {
 	margin: 10px 69px 0px 69px;
 	text-align:  justify;
