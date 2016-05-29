@@ -1,13 +1,13 @@
-function loadArticleURL() {
-	/*if(location.search.length <= 1){
+function loadArticleURL(){
+	if(location.search.length <= 1){
 		location.search="?1";
 	}
 	var s = location.search;
 	var id = parseInt(s.slice(1));
-	loadArticle(id,"articles");*/
+	loadArticle(id,"articles");
 }
 
-function loadArticle(articleID, ParentID) {
+function loadArticle(articleID, ParentID){
 	var reviewIndex = getJSONFile("articles\\ReviewIndex");
 	var file = reviewIndex.articles[articleID].file;
 	var review = getJSONFile("articles\\"+file);
