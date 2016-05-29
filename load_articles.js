@@ -24,9 +24,11 @@ function getJSONFile(file){
 	xmlhttp.onreadystatechange = function() {
 		if(tfile.readyState === 4 && tfile.status === 200) {
 			var rjson = JSON.parse(xmlhttp.responseText);
+			console.log("Got " + file);
 			return rjson;
 		}
 	};
 	xmlhttp.open("GET",file,true);
 	xmlhttp.send();
+	console.log("Getting " + file);
 }
