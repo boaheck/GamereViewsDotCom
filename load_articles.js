@@ -1,6 +1,6 @@
 function loadArticleURL(){
 	if(location.search.length <= 1){
-		location.search = "?1";
+		location.search = "?0";
 	}
 	var s = location.search;
 	var id = parseInt(s.slice(1));
@@ -10,6 +10,7 @@ function loadArticleURL(){
 function loadArticle(articleID, ParentID){
 	getJSONFile("articles\\ReviewIndex.json",function(reviewIndex){
 	console.log(reviewIndex);
+	if(articleID >= reviewIndex.articles.length)
 	var file = reviewIndex.articles[articleID].file;
 	getJSONFile("articles\\"+file,function(review){
 	var htmlArticle = document.getElementById(ParentID);
