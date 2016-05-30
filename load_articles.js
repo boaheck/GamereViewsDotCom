@@ -29,6 +29,7 @@ function getJSONFile(file, callback){
 			var rjson = JSON.parse(xmlhttp.responseText);
 			console.log("Got " + file);
 			callback();
+			console.log(rjson);
 			return rjson;
 		}
 	};
