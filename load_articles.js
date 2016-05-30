@@ -27,8 +27,8 @@ function getJSONFile(file, callback){
 		if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 			var rjson = JSON.parse(xmlhttp.responseText);
 			console.log("Got " + file);
-			return rjson;
 			callback();
+			return rjson;
 		}
 	};
 	xmlhttp.open("GET",file,true);
