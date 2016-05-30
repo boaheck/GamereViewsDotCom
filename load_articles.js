@@ -14,7 +14,7 @@ function loadArticle(articleID, ParentID){
 	getJSONFile("articles\\"+file,function(review){
 	var htmlArticle = document.getElementById(ParentID);
 	htmlArticle.getElementsByClassName("articlehead")[0].innerHTML=review.articletitle;
-	htmlArticle.getElementsByClassName("articleimg")[0].setAttribute("src",review.img);
+	htmlArticle.getElementsByClassName("articleimg")[0].setAttribute("src","img\\"review.img);
 	htmlArticle.getElementsByClassName("articlescore")[0].innerHTML=review.score;
 	htmlArticle.getElementsByClassName("articledate")[0].innerHTML=review.date;
 	htmlArticle.getElementsByClassName("articlebody")[0].innerHTML=review.bod;
