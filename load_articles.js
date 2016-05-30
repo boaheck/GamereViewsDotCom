@@ -8,7 +8,7 @@ function loadArticleURL(){
 }
 
 function loadArticle(articleID, ParentID){
-	var reviewIndex = getJSONFile("articles\\ReviewIndex");
+	var reviewIndex = getJSONFile("articles\\ReviewIndex.json");
 	var file = reviewIndex.articles[articleID].file;
 	var review = getJSONFile("articles\\"+file);
 	var htmlArticle = document.getElementById(ParentID);
