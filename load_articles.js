@@ -9,6 +9,7 @@ function loadArticleURL(){
 
 function loadArticle(articleID, ParentID){
 	var reviewIndex = getJSONFile("articles\\ReviewIndex.json",function(){
+	console.log(reviewIndex);
 	var file = reviewIndex.articles[articleID].file;
 	var review = getJSONFile("articles\\"+file,function(){
 	var htmlArticle = document.getElementById(ParentID);
