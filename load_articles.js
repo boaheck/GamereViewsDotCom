@@ -8,13 +8,13 @@ function loadArticleURL(){
 }
 
 function loadArticle(articleID, ParentID){
-	getJSONFile("articles\\ReviewIndex.json","",function getArticle(reviewIndex));
-	if(articleID >= reviewIndex.articles.length){
-		articleID = 0;
-	}
-	var file = reviewIndex.articles[articleID].file;
-	getJSONFile("articles\\"+file,ParentID,assignArticle);
-	}
+	getJSONFile("articles\\ReviewIndex.json","",function getArticle(reviewIndex){
+		if(articleID >= reviewIndex.articles.length){
+			articleID = 0;
+		}
+		var file = reviewIndex.articles[articleID].file;
+		getJSONFile("articles\\"+file,ParentID,assignArticle);
+	});
 }
 
 function assignArticle(json,ParentID){
