@@ -21,14 +21,18 @@ function loadArticle(articleID, ParentID){
 
 function getJSONFile(file){
 	var xmlhttp = new XMLHttpRequest();
+	var got = false;
 	xmlhttp.onreadystatechange = function() {
 		if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 			var rjson = JSON.parse(xmlhttp.responseText);
 			console.log("Got " + file);
-			return rjson;
+			got = true;
 		}
 	};
 	xmlhttp.open("GET",file,true);
 	xmlhttp.send();
 	console.log("Getting " + file);
+	while(got == false){
+	}
+	return rjson;
 }
