@@ -10,7 +10,9 @@ function loadArticleURL(){
 function loadArticle(articleID, ParentID){
 	getJSONFile("articles\\ReviewIndex.json",function(reviewIndex){
 	console.log(reviewIndex);
-	if(articleID >= reviewIndex.articles.length)
+	if(articleID >= reviewIndex.articles.length){
+		articleID = 0;
+	}
 	var file = reviewIndex.articles[articleID].file;
 	getJSONFile("articles\\"+file,function(review){
 	var htmlArticle = document.getElementById(ParentID);
