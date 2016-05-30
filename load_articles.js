@@ -8,8 +8,7 @@ function loadArticleURL(){
 }
 
 function loadArticle(articleID, ParentID){
-	getJSONFile("articles\\ReviewIndex.json","",function getArticle(reviewIndex)
-	console.log(reviewIndex);
+	getJSONFile("articles\\ReviewIndex.json","",function getArticle(reviewIndex));
 	if(articleID >= reviewIndex.articles.length){
 		articleID = 0;
 	}
