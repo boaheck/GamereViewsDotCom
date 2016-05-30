@@ -8,26 +8,28 @@ function loadArticleURL(){
 }
 
 function loadArticle(articleID, ParentID){
-	var reviewIndex = getJSONFile("articles\\ReviewIndex.json");
+	getJSONFile("articles\\ReviewIndex.json",function(reviewIndex){
 	console.log(reviewIndex);
 	var file = reviewIndex.articles[articleID].file;
-	var review = getJSONFile("articles\\"+file);
+	getJSONFile("articles\\"+file,function(review){
 	var htmlArticle = document.getElementById(ParentID);
 	htmlArticle.getElementsByClassName("articlehead")[0].innerHTML=review.articletitle;
 	htmlArticle.getElementsByClassName("articleimg")[0].setAttribute("src",review.img);
 	htmlArticle.getElementsByClassName("articlescore")[0].innerHTML=review.score;
 	htmlArticle.getElementsByClassName("articledate")[0].innerHTML=review.date;
 	htmlArticle.getElementsByClassName("articlebody")[0].innerHTML=review.bod;
-	}
+	});
+	});
+}
 
-function getJSONFile(file){
+function getJSONFile(file, callback){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 		if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 			var rjson = JSON.parse(xmlhttp.responseText);
 			console.log(rjson);
 			console.log("Got " + file);
-			return rjson;
+			callback(rjson);
 		}
 	};
 	xmlhttp.open("GET",file,true);
