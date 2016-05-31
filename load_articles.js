@@ -17,7 +17,7 @@ function loadPageURL(){
 	var page = parseInt(s.slice(1));
 	var startical = (page * pageLength);
 	getJSONFile("articles\\ReviewIndex.json","",function getArticles(reviewIndex){
-		var len = reviewIndex.articles.length;
+		var len = reviewIndex.articles.length - 1;
 		for (var i = 0; i < pageLength; i++) {
 			articleID = len - (startical + i);
 			if(articleID < 0 || articleID >= len){
