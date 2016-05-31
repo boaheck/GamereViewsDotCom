@@ -23,6 +23,8 @@ function loadPageURL(){
 			if(articleID < 0){
 				removeElement(document.getElementById("article"+(i+1)));
 			}else{
+				console.log(articleID);
+				console.log(reviewIndex);
 				var file = reviewIndex.articles[articleID].file;
 				getJSONFile("articles\\"+file,ParentID,assignPageArticle);
 			}
