@@ -20,7 +20,7 @@ function loadPageURL(){
 		var len = reviewIndex.articles.length - 1;
 		for (var i = 0; i < pageLength; i++) {
 			articleID = len - (startical + i);
-			if(articleID < 0 || articleID >= len){
+			if(articleID < 0 || articleID > len){
 				removeElement(document.getElementById("article"+(i+1)));
 			}else{
 				console.log(articleID);
@@ -51,7 +51,7 @@ function assignPageArticle(json,ParentID){
 	htmlArticle.getElementsByClassName("articlescore")[0].innerHTML=json.score;
 	htmlArticle.getElementsByClassName("articledate")[0].innerHTML=json.date;
 	htmlArticle.getElementsByClassName("mp_articlebody")[0].innerHTML=json.bod;
-	htmlArticle.getElementsByClassName("articleReadmore")[0].setAttribute("href","article.html?"+json.num)
+	htmlArticle.getElementsByClassName("articlereadmore")[0].setAttribute("href","article.html?"+json.num)
 }
 function assignArticle(json,ParentID){
 	var htmlArticle = document.getElementById(ParentID);
