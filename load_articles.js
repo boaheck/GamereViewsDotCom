@@ -22,9 +22,10 @@ function loadPageURL(){
 			articleID = len - (startical + i);
 			if(articleID < 0){
 				removeElement(document.getElementById("article"+(i+1)));
+			}else{
+				var file = reviewIndex.articles[articleID].file;
+				getJSONFile("articles\\"+file,ParentID,assignPageArticle);
 			}
-			var file = reviewIndex.articles[articleID].file;
-			getJSONFile("articles\\"+file,ParentID,assignPageArticle);
 		};
 		
 	});
