@@ -111,8 +111,8 @@ a {
 .olderbutton {
 	background-color:#d70c28;
 	color:#eeeeee;
-	height:42px;
-	line-height:20px;
+	height:30px;
+	line-height:30px;
 	text-align: center;
 	border-width: 5px;
 	border-color: #930a39;
@@ -128,8 +128,8 @@ a {
 .newerbutton {
 	background-color:#d70c28;
 	color:#eeeeee;
-	height:42px;
-	line-height:20px;
+	height:30px;
+	line-height:30px;
 	text-align: center;
 	border-width: 5px;
 	border-color: #930a39;

@@ -31,9 +31,13 @@ function loadPageURL(){
 		};
 		if(len-(startical+pageLength) <= 0){
 			removeElement(document.getElementsByClassName("olderbutton")[0]);
+		}else{
+			document.getElementsByClassName("olderbutton").setAttribute("href","index?"+(page-1))
 		}
 		if(page === 0){
 			removeElement(document.getElementsByClassName("newerbutton")[0]);
+		}else{
+			document.getElementsByClassName("newerbutton").setAttribute("href","index?"+(page+1))
 		}
 	});
 }
