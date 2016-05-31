@@ -15,12 +15,12 @@ function loadPageURL(){
 	}
 	var s = location.search;
 	var page = parseInt(s.slice(1));
-	var startical = (page * pageLength)-1;
+	var startical = (page * pageLength);
 	getJSONFile("articles\\ReviewIndex.json","",function getArticles(reviewIndex){
 		var len = reviewIndex.articles.length;
 		for (var i = 0; i < pageLength; i++) {
 			articleID = len - (startical + i);
-			if(articleID < 0){
+			if(articleID < 0 || articleID >= len){
 				removeElement(document.getElementById("article"+(i+1)));
 			}else{
 				console.log(articleID);
