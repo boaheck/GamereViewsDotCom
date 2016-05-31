@@ -29,7 +29,12 @@ function loadPageURL(){
 				getJSONFile("articles\\"+file,"article"+(i+1),assignPageArticle);
 			}
 		};
-		
+		if(len-(startical+pageLength) <= 0){
+			removeElement(document.getElementsByClassName("olderbutton")[0]);
+		}
+		if(page === 0){
+			removeElement(document.getElementsByClassName("newerbutton")[0]);
+		}
 	});
 }
 

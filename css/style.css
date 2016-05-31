@@ -120,6 +120,7 @@ a {
 	border-radius: 10px;
 	float: left;
 	width: 69px;
+	margin-left: 10%;
 }
 .olderbutton:hover{
 	background-color:#930a39;
@@ -136,6 +137,7 @@ a {
 	border-radius: 10px;
 	float: right;
 	width: 69px;
+	margin-right: 10%;
 }
 .newerbutton:hover{
 	background-color:#930a39;
