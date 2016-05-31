@@ -98,6 +98,8 @@ a {
 .article {
 	background-color: #dedcea;
 	margin-bottom: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
 	border-color: #930a39;
 	border-style: solid;
 	border-radius: 10px;
