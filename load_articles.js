@@ -43,7 +43,7 @@ function loadArticle(articleID, ParentID){
 	});
 }
 
-function assignArticle(json,ParentID){
+function assignPageArticle(json,ParentID){
 	var htmlArticle = document.getElementById(ParentID);
 	htmlArticle.getElementsByClassName("articlehead")[0].innerHTML=json.articletitle;
 	htmlArticle.getElementsByClassName("articleheaderlink")[0].setAttribute("href","article.html?"+json.num)
