@@ -26,7 +26,7 @@ function loadPageURL(){
 				console.log(articleID);
 				console.log(reviewIndex);
 				var file = reviewIndex.articles[articleID].file;
-				getJSONFile("articles\\"+file,ParentID,assignPageArticle);
+				getJSONFile("articles\\"+file,"article"+(i+1),assignPageArticle);
 			}
 		};
 		
