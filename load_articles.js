@@ -27,7 +27,7 @@ function loadPageURL(){
 				getJSONFile("articles\\"+file,"article"+(i+1),assignPageArticle);
 			}
 		};
-		if(len-(startical+pageLength) <= 0){
+		if(len-(startical+pageLength) < 0){
 			removeElement(document.getElementsByClassName("olderbutton")[0]);
 		}else{
 			document.getElementsByClassName("olderbutton")[0].setAttribute("href","index?"+(page+1))
