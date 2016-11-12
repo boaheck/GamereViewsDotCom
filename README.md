@@ -1,6 +1,6 @@
 #Gamere Views Dot Com
 
-This little website was mostly an experiment to see if I could learn a bit more html javascript and css. It is hosted at [gamereviewsdotcom.xyz](gamereviewsdotcom.xyz)
+This little website was mostly an experiment to see if I could learn a bit more html javascript and css. It is hosted at [gamereviewsdotcom.xyz](http://gamereviewsdotcom.xyz)
 
 All the reviews here are written by the fictional character Gamere Views. Gamere has terrible spelling, grammar and even at times a terrible understanding of the world. Despite all this I like to think that Gameres game reviews show some insight and may explore interesting viewpoints on games while also creating some humerous reading experiences.
 
